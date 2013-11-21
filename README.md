@@ -1,19 +1,20 @@
 ad-modelica-electrical
 ======================
 
-Algorithmically Differentiated Library of a part of the standard library Modelica.Electrical 
+Algorithmically Differentiated Library of a part of the standard library Modelica.Electrical.Analog.Basic 
 
 
 Description
 =========== 
 
-An illustrative example for algorithmic differentiation of a part of the modelica standard library Modelica.Electrical 
+An illustrative example for algorithmic differentiation of some of the components of the modelica standard 
+library Modelica.Electrical.Analog.Basic 
 
 
 Release
 ======= 
 
-currently an initial release 
+Currently an initial release 
 
 
 License
