@@ -1,4 +1,5 @@
 within ADMSL;
-package Interfaces 
-extends Modelica.Icons.InterfacesPackage;
+package Interfaces
+  extends Modelica.Icons.InterfacesPackage;
 end Interfaces;
+
