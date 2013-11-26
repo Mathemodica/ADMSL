@@ -1,6 +1,4 @@
 within ADMSL.Electrical.Analog.Interfaces.Bases;
-
-
 partial model OnePort
   "Component with two electrical pins p and n and current i from p to n"
 
@@ -57,3 +55,4 @@ equation
           lineColor={160,160,164},
           textString="i")}));
 end OnePort;
+
