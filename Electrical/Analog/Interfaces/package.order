@@ -3,4 +3,6 @@ NegativePin
 PositivePin
 TwoPin
 OnePort
+ConditionalHeatPort0
+ConditionalHeatPort1
 Bases

@@ -68,8 +68,11 @@ model Resistor "Ideal linear electrical resistor"
   parameter Modelica.SIunits.LinearTemperatureCoefficient alpha=0
       "Temperature coefficient of resistance (R_actual = R*(1 + alpha*(T_heatPort - T_ref))";
 
-  extends Modelica.Electrical.Analog.Interfaces.OnePort;
-  extends Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort(                    T = T_ref);
+  replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
+  extends OnePort;
+  replaceable class ConditionalHeatPort =
+        Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort;
+  extends ConditionalHeatPort(                    T = T_ref);
   Modelica.SIunits.Resistance R_actual
       "Actual resistance = R*(1 + alpha*(T_heatPort - T_ref))";
 
@@ -200,6 +203,7 @@ end Conductor;
 
   model Capacitor "Ideal linear electrical capacitor"
     replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
+     // constrainedby  Modelica.Electrical.Analog.Interfaces.OnePort;
     extends OnePort;
     parameter Modelica.SIunits.Capacitance C(start=1) "Capacitance";
 

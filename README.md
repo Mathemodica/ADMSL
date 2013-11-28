@@ -11,6 +11,15 @@ An illustrative example for algorithmic differentiation of some of the component
 library Modelica.Electrical.Analog.Basic 
 
 
+Aims and goals
+==============
+
+It represents a testing platform for algoirhtmic differerntiation of Modelica libraries w.r.t.
+  * algorithmic methodologies 
+  * identifying current limitations towards AD of Modelica models  
+  * suggesting/recommending further potential language improvements towards AD of Modelica models   
+
+
 Release
 ======= 
 
