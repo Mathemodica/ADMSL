@@ -138,9 +138,14 @@ model Conductor "Ideal linear electrical conductor"
   parameter Modelica.SIunits.Temperature T_ref=300.15 "Reference temperature";
   parameter Modelica.SIunits.LinearTemperatureCoefficient alpha=0
       "Temperature coefficient of conductance (G_actual = G_ref/(1 + alpha*(T_heatPort - T_ref))";
-  extends Modelica.Electrical.Analog.Interfaces.OnePort;
-  extends Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort(
-                                                               T = T_ref);
+
+  replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
+  extends OnePort;
+
+  replaceable class ConditionalHeatPort =
+        Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort;
+  extends ConditionalHeatPort(T = T_ref);
+
   Modelica.SIunits.Conductance G_actual
       "Actual conductance = G_ref/(1 + alpha*(T_heatPort - T_ref))";
 

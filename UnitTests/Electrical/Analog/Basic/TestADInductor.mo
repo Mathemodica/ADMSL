@@ -1,7 +1,7 @@
 within ADMSL.UnitTests.Electrical.Analog.Basic;
 model TestADInductor
 
-  outer parameter Integer NG = 2;
+  inner parameter Integer NG = 2;
 
   ADMSL.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-14,-30},{6,-10}})));

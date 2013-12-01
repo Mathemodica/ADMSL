@@ -33,11 +33,16 @@ Copyright © 2013, Austrian Institute of Technology, Energy Department, Complex 
 This Modelica package is free software and the use is completely at your own risk;
 it can be redistributed and/or modified under the terms of the [Modelica License 2](https://modelica.org/licenses/ModelicaLicense2).
 
-
 Author 
 ======
 
 Atiyah Elsheikh (Email: Atiyah.Elsheikh@ait.ac.at)  
+
+
+Tested with
+===========
+
+Dymola 2014, Modelica library 3.2
 
 
 Literature
@@ -49,4 +54,4 @@ Coming soon!
 Further contribution
 ====================
 
-Further contribution / collaboration on the topic of algorithmic differentiation are welcome   
+Further contribution / collaboration on the topic of algorithmic differentiation of Modelica libraries are welcome   
