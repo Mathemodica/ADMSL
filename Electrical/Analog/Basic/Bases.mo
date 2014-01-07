@@ -4,8 +4,7 @@ package Bases
   extends Modelica.Icons.BasesPackage;
   model Ground "Ground node"
 
-    replaceable Modelica.Electrical.Analog.Interfaces.Pin p constrainedby
-      Modelica.Electrical.Analog.Interfaces.Pin
+    replaceable Modelica.Electrical.Analog.Interfaces.Pin p
                      annotation (Placement(transformation(
           origin={0,100},
           extent={{10,-10},{-10,10}},
@@ -68,10 +67,10 @@ model Resistor "Ideal linear electrical resistor"
   parameter Modelica.SIunits.LinearTemperatureCoefficient alpha=0
       "Temperature coefficient of resistance (R_actual = R*(1 + alpha*(T_heatPort - T_ref))";
 
-  replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
+  replaceable class OnePort = ADMSL.Electrical.Analog.Interfaces.Bases.OnePort;
   extends OnePort;
   replaceable class ConditionalHeatPort =
-        Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort;
+        ADMSL.Electrical.Analog.Interfaces.Bases.ConditionalHeatPort;
   extends ConditionalHeatPort(                    T = T_ref);
   Modelica.SIunits.Resistance R_actual
       "Actual resistance = R*(1 + alpha*(T_heatPort - T_ref))";
@@ -139,11 +138,11 @@ model Conductor "Ideal linear electrical conductor"
   parameter Modelica.SIunits.LinearTemperatureCoefficient alpha=0
       "Temperature coefficient of conductance (G_actual = G_ref/(1 + alpha*(T_heatPort - T_ref))";
 
-  replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
+  replaceable class OnePort = ADMSL.Electrical.Analog.Interfaces.Bases.OnePort;
   extends OnePort;
 
   replaceable class ConditionalHeatPort =
-        Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort;
+        ADMSL.Electrical.Analog.Interfaces.Bases.ConditionalHeatPort;
   extends ConditionalHeatPort(T = T_ref);
 
   Modelica.SIunits.Conductance G_actual
@@ -207,8 +206,9 @@ equation
 end Conductor;
 
   model Capacitor "Ideal linear electrical capacitor"
-    replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
-     // constrainedby  Modelica.Electrical.Analog.Interfaces.OnePort;
+    replaceable class OnePort =
+        ADMSL.Electrical.Analog.Interfaces.Bases.OnePort;
+     // constrainedby Modelica.Electrical.Analog.Interfaces.OnePort;
     extends OnePort;
     parameter Modelica.SIunits.Capacitance C(start=1) "Capacitance";
 
@@ -264,7 +264,8 @@ end Conductor;
   end Capacitor;
 
   model Inductor "Ideal linear electrical inductor"
-    replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
+    replaceable class OnePort =
+        ADMSL.Electrical.Analog.Interfaces.Bases.OnePort;
     extends OnePort;
 
     parameter Modelica.SIunits.Inductance L(start=1) "Inductance";

@@ -7,6 +7,7 @@ model ChuaCircuit "Chua's circuit, ns, V, A"
   import ADMSL.Electrical.Analog.Examples.Utilities;
   import Modelica.Icons;
   extends Icons.Example;
+  // extends ADMSL.Interfaces.GradientInfo;
 
   inner parameter Integer NG = 1;
 

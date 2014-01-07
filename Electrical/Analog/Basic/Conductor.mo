@@ -1,5 +1,5 @@
 within ADMSL.Electrical.Analog.Basic;
-model Conductor
+class Conductor
   extends Bases.Conductor(
     redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort,
@@ -37,7 +37,7 @@ equation
   // G_actual = G/(1 + alpha*(T_heatPort - T_ref));
 
   T_1111 = T_heatPort - T_ref;
-  // g_T_1111[1:NG] = g_T_heatPort[1:NG] - g_T_ref[1:NG];
+  // g_T_1111[1:NG] = g_T_heatPort[1:NG] - g_T_ref[1:NG];ld
 
   T_111 = alpha * T_1111;
   // g_T_111[1:NG] = g_alpha[1:NG] * T_111 + alpha * g_T_1111[1:NG];
