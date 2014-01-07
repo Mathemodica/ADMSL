@@ -1,5 +1,5 @@
 within ADMSL.Electrical.Analog.Basic;
-model Capacitor
+class Capacitor
   extends ADMSL.Interfaces.GradientInfo;
   extends Bases.Capacitor(redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort);

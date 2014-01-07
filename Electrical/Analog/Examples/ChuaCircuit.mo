@@ -9,7 +9,7 @@ model ChuaCircuit "Chua's circuit, ns, V, A"
   extends Icons.Example;
   // extends ADMSL.Interfaces.GradientInfo;
 
-  outer parameter Integer NG = 1;
+  inner parameter Integer NG = 1;
 
   Basic.Inductor L(L=18,g_L={1}) annotation (Placement(transformation(
         origin={-75,38},

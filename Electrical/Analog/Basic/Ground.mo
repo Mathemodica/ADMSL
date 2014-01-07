@@ -1,7 +1,7 @@
 within ADMSL.Electrical.Analog.Basic;
-model Ground "AD version of Modelica.Electrical.Analog.Basic.Ground"
-  extends Bases.Ground(redeclare ADMSL.Electrical.Analog.Interfaces.Pin p);
+class Ground "AD version of Modelica.Electrical.Analog.Basic.Ground"
   extends ADMSL.Interfaces.GradientInfo;
+  extends Bases.Ground(redeclare ADMSL.Electrical.Analog.Interfaces.Pin p);
 
 equation
   for ad_i in 1:NG loop

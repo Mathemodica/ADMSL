@@ -1,5 +1,5 @@
 within ADMSL.Electrical.Analog.Basic;
-model Inductor
+class Inductor
   extends ADMSL.Interfaces.GradientInfo;
   extends Bases.Inductor(redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort);
