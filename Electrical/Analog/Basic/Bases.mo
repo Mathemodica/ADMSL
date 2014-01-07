@@ -207,8 +207,8 @@ equation
 end Conductor;
 
   model Capacitor "Ideal linear electrical capacitor"
-    replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort;
-     // constrainedby  Modelica.Electrical.Analog.Interfaces.OnePort;
+    replaceable class OnePort = Modelica.Electrical.Analog.Interfaces.OnePort
+     constrainedby Modelica.Electrical.Analog.Interfaces.OnePort;
     extends OnePort;
     parameter Modelica.SIunits.Capacitance C(start=1) "Capacitance";
 
