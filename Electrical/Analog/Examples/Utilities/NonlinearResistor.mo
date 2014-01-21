@@ -1,5 +1,5 @@
 within ADMSL.Electrical.Analog.Examples.Utilities;
-model NonlinearResistor
+class NonlinearResistor
   extends Bases.NonlinearResistor(redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort);
   extends ADMSL.Interfaces.GradientInfo;

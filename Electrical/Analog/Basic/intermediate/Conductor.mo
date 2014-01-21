@@ -1,5 +1,5 @@
 within ADMSL.Electrical.Analog.Basic.intermediate;
-model Conductor
+class Conductor
   extends Bases.Conductor(
     redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort,
