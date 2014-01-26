@@ -67,7 +67,8 @@ model Resistor "Ideal linear electrical resistor"
   parameter Modelica.SIunits.LinearTemperatureCoefficient alpha=0
       "Temperature coefficient of resistance (R_actual = R*(1 + alpha*(T_heatPort - T_ref))";
 
-  replaceable class OnePort = ADMSL.Electrical.Analog.Interfaces.Bases.OnePort;
+  replaceable class OnePort =
+      ADMSL.Electrical.Analog.Interfaces.Bases.OnePort;
   extends OnePort;
   replaceable class ConditionalHeatPort =
         ADMSL.Electrical.Analog.Interfaces.Bases.ConditionalHeatPort;

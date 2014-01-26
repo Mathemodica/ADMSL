@@ -1,7 +1,8 @@
 within ADMSL.Electrical.Analog.Basic;
 class Inductor
-  extends ADMSL.Interfaces.GradientInfo;
-  extends Bases.Inductor(redeclare replaceable class OnePort =
+  extends ADMSL.Utilities.GradientInfo;
+  extends MSL.Electrical.Analog.Basic.Inductor(
+                         redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort);
 
   parameter Real g_L[NG] = zeros(NG);

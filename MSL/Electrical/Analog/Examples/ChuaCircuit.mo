@@ -1,4 +1,4 @@
-within ADMSL.Electrical.Analog.Examples.Bases;
+within ADMSL.MSL.Electrical.Analog.Examples;
 encapsulated model ChuaCircuit "Chua's circuit, ns, V, A"
   import ADMSL;
  // replaceable class Basic = ADMSL.Ectrical.Analog.Basic;
@@ -32,7 +32,8 @@ encapsulated model ChuaCircuit "Chua's circuit, ns, V, A"
         origin={-25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Utilities.Bases.NonlinearResistor Nr(
+  ADMSL.MSL.Electrical.Analog.Examples.Utilities.NonlinearResistor
+                                    Nr(
     Ga(min=-1) = -0.757576,
     Gb(min=-1) = -0.409091,
     Ve=1) annotation (Placement(transformation(

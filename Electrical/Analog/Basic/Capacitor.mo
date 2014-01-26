@@ -1,7 +1,8 @@
 within ADMSL.Electrical.Analog.Basic;
 class Capacitor
-  extends ADMSL.Interfaces.GradientInfo;
-  extends Bases.Capacitor(redeclare replaceable class OnePort =
+  extends ADMSL.Utilities.GradientInfo;
+  extends MSL.Electrical.Analog.Basic.Capacitor(
+                          redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort);
 
   parameter Real g_C[NG] = zeros(NG);

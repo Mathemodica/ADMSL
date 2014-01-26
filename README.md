@@ -1,5 +1,5 @@
 ﻿ADMSL
-======================
+=====
 
 Algorithmically Differentiated Library of a part of the standard library Modelica.Electrical.Analog.Basic 
 
@@ -17,13 +17,16 @@ Aims and goals
 It represents a testing platform for algoirhtmic differerntiation of Modelica libraries w.r.t.
   * algorithmic methodologies 
   * identifying current limitations towards AD of Modelica models  
-  * suggesting/recommending further potential language improvements towards AD of Modelica models   
+  * suggesting / recommending further potential language improvements towards AD of Modelica models   
 
 
-Release
-======= 
+Release Notes 
+============= 
 
-Currently an initial release 
+current release 1.0 
+
+
+r1.0 : 26.01.2014 - Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
 
 
 License
@@ -48,7 +51,26 @@ Dymola 2014, Modelica library 3.2
 Literature
 ==========
 
-Coming soon!
+Please cite: 
+
+Atiyah Elsheikh, Modeling parameter sensitivities via equation-based algorithmic differentiation techniques -- The ADMSL.Electrical.Analog.Library,
+Modelica'2014: The 10th International Modelica Conference, Mar. 2014 Lund, Sweden, 
+
+Online version of the paper can be found here: 
+http://www.researchgate.net/profile/Atiyah_Elsheikh/publications/ 
+
+Bibtex source: 
+@CONFERENCE{Elsheikh2014a,
+  author = {Atiyah Elsheikh},
+  title = {Modeling parameter sensitivities via equation-based algorithmic differentiation
+	techniques -- The {ADMSL.Electrical.Analog} library},
+  booktitle = {Modelica'2014: The 10th International Modelica Conference},
+  year = {2014},
+  address = {Lund, Sweden},
+  month = {Mar.},
+  owner = {ElsheikhA},
+  timestamp = {2014.01.16}
+}
 
 
 Further contribution

@@ -10,21 +10,26 @@ model ChuaCircuit2 "Chua's circuit, ns, V, A"
   import Modelica.Icons;
   extends Icons.Example;
 
-  BasicClasses.Inductor L(L=18) annotation (Placement(transformation(
+  MSL.Electrical.Analog.Basic.Inductor
+                        L(L=18) annotation (Placement(transformation(
         origin={-75,38},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  BasicClasses.Resistor Ro(R=12.5e-3) annotation (Placement(transformation(
+  MSL.Electrical.Analog.Basic.Resistor
+                        Ro(R=12.5e-3) annotation (Placement(transformation(
         origin={-75,-17},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  BasicClasses.Conductor G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
+  MSL.Electrical.Analog.Basic.Conductor
+                         G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
             {25,88}},      rotation=0)));
-  BasicClasses.Capacitor C1(C=10, v(start=4)) annotation (Placement(transformation(
+  MSL.Electrical.Analog.Basic.Capacitor
+                         C1(C=10, v(start=4)) annotation (Placement(transformation(
         origin={25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  BasicClasses.Capacitor C2(C=100) annotation (Placement(transformation(
+  MSL.Electrical.Analog.Basic.Capacitor
+                         C2(C=100) annotation (Placement(transformation(
         origin={-25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
@@ -35,7 +40,8 @@ model ChuaCircuit2 "Chua's circuit, ns, V, A"
         origin={75,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  BasicClasses.Ground Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
+  MSL.Electrical.Analog.Basic.Ground
+                      Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
             -62}}, rotation=0)));
 equation
 

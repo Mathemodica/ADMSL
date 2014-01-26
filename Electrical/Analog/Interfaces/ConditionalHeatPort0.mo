@@ -1,7 +1,8 @@
 within ADMSL.Electrical.Analog.Interfaces;
 partial model ConditionalHeatPort0
-  extends Bases.ConditionalHeatPort(useHeatPort=false);
-  extends ADMSL.Interfaces.GradientInfo;
+  extends MSL.Electrical.Analog.Interfaces.ConditionalHeatPort(
+                                    useHeatPort=false);
+  extends ADMSL.Utilities.GradientInfo;
 
   parameter Real g_T[NG] = zeros(NG);
 

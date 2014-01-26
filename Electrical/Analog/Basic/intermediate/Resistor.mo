@@ -1,11 +1,11 @@
 within ADMSL.Electrical.Analog.Basic.intermediate;
 class Resistor
-  extends Bases.Resistor(
+  extends MSL.Electrical.Analog.Basic.Resistor(
     redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort,
     redeclare replaceable class ConditionalHeatPort =
         ADMSL.Electrical.Analog.Interfaces.ConditionalHeatPort0);
-  extends ADMSL.Interfaces.GradientInfo;
+  extends ADMSL.Utilities.GradientInfo;
 
   parameter Real g_R[NG] = zeros(NG);
   parameter Real g_T_ref[NG] = zeros(NG);

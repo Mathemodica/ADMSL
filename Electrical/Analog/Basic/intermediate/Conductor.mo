@@ -1,11 +1,11 @@
 within ADMSL.Electrical.Analog.Basic.intermediate;
 class Conductor
-  extends Bases.Conductor(
+  extends MSL.Electrical.Analog.Basic.Conductor(
     redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort,
     redeclare replaceable class ConditionalHeatPort =
         ADMSL.Electrical.Analog.Interfaces.ConditionalHeatPort0);
-  extends ADMSL.Interfaces.GradientInfo;
+  extends ADMSL.Utilities.GradientInfo;
 
    parameter Real g_G[NG] = zeros(NG)
     "gradient of Conductance at temperature T_ref";
