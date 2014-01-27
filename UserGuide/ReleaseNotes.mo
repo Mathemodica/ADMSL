@@ -2,7 +2,9 @@ within ADMSL.UserGuide;
 model ReleaseNotes
   extends Modelica.Icons.Information;
   annotation (Documentation(info="<html>
-<p><b><font style=\"color: #008000; \">R23 </font></b>27th August 2012 </p>
-<p>first published release of the library with Basic phyiscial units, basic components for nodes and reactions both with parameterized and static number of connections. Examples and algorithmically differentiated components available. </p>
+<p><h4><font color=\"#008000\">current release </font></h4></p>
+<p>R1.0 </p>
+<p><br/><h4><font color=\"#008000\">History</font></h4></p>
+<p>r1.0 : 26.01.2014 - Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic</p>
 </html>"));
 end ReleaseNotes;
