@@ -1,10 +1,8 @@
 within ADMSL.Electrical.Analog.Interfaces;
 partial model OnePort
  extends MSL.Electrical.Analog.Interfaces.OnePort(
-                       redeclare ADMSL.Electrical.Analog.Interfaces.PositivePin
-                                                                         p,
-                       redeclare ADMSL.Electrical.Analog.Interfaces.NegativePin
-                                                                         n);
+                       redeclare PositivePin p,
+                       redeclare NegativePin n);
  extends ADMSL.Utilities.GradientInfo;
 
  Real g_v[NG];
