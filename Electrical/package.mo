@@ -1,5 +1,5 @@
 within ADMSL;
-package Electrical 
+package Electrical "The AD version of Modelica.Electrical"
   extends Modelica.Icons.Package;
 
 

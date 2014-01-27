@@ -1,3 +1,3 @@
 within ADMSL;
-package Thermal 
+package Thermal "The AD version of Modelica.Thermal"
 end Thermal;

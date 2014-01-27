@@ -1,5 +1,6 @@
 within ADMSL.Electrical.Analog.Interfaces;
 partial model TwoPin
+  "AD version of Modelica.Electrical.Analog.Interfaces.TwoPin"
   extends MSL.Electrical.Analog.Interfaces.TwoPin(
                        redeclare PositivePin p,
                        redeclare NegativePin n);

@@ -1,5 +1,5 @@
 within ADMSL.Electrical.Analog.Basic.intermediate;
-class Conductor
+class Conductor "AD version of Modelica.Electrical.Analog.Basic.Conductor"
   extends MSL.Electrical.Analog.Basic.Conductor(
     redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort,

@@ -1,5 +1,6 @@
 within ADMSL.Electrical.Analog.Interfaces;
 connector NegativePin
+  "AD version of Modelica.Electrical.Analog.Interfaces.NegativePin"
   extends Modelica.Electrical.Analog.Interfaces.NegativePin;
   extends ADMSL.Utilities.GradientInfo;
   Real g_v[NG] "gradient of the voltage";

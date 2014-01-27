@@ -1,5 +1,5 @@
 within ADMSL.UserGuide;
-model ReleaseNotes
+model ReleaseNotes "Release notes"
   extends Modelica.Icons.Information;
   annotation (Documentation(info="<html>
 <p><h4><font color=\"#008000\">current release </font></h4></p>

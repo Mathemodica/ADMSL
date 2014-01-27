@@ -1,5 +1,6 @@
 within ADMSL.Thermal.HeatTransfer.Interfaces;
 connector HeatPort_a
+  "AD version of Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a"
   extends HeatPort;
   annotation (Icon(graphics={     Rectangle(
           extent={{-118,58},{4,-50}},

@@ -1,5 +1,5 @@
 within ADMSL.UserGuide;
-model Overview "The main contents of the library"
+model Overview "The main contents and the usage of the library"
   extends Modelica.Icons.Information;
   annotation (Documentation(info="<html>
 <p><h4><font color=\"#008000\">About</font></h4></p>
