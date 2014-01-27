@@ -1,5 +1,5 @@
 within ADMSL;
-package UserGuide 
+package UserGuide "User's guide"
   extends Modelica.Icons.Information;
 
 

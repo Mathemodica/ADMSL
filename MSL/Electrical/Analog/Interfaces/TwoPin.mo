@@ -1,4 +1,4 @@
-within ADMSL.Electrical.Analog.Interfaces.Bases;
+within ADMSL.MSL.Electrical.Analog.Interfaces;
 partial model TwoPin "Component with two electrical pins"
   Modelica.SIunits.Voltage v "Voltage drop between the two pins (= p.v - n.v)";
   replaceable Modelica.Electrical.Analog.Interfaces.PositivePin p

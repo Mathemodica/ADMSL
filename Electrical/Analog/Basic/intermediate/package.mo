@@ -1,3 +1,5 @@
 within ADMSL.Electrical.Analog.Basic;
-package intermediate "equivalent preprocessed algorithmically differentiated components"
+package intermediate "Preprocessed algorithmically differentiated components"
+
+
 end intermediate;

@@ -1,17 +1,17 @@
 within ADMSL.Electrical.Analog.Basic;
-class Conductor
-  extends Bases.Conductor(
+class Conductor "AD version of Modelica.Electrical.Analog.Basic."
+  extends MSL.Electrical.Analog.Basic.Conductor(
     redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort,
     redeclare replaceable class ConditionalHeatPort =
         ADMSL.Electrical.Analog.Interfaces.ConditionalHeatPort0);
-  extends ADMSL.Interfaces.GradientInfo;
+  extends ADMSL.Utilities.GradientInfo;
 
    parameter Real g_G[NG] = zeros(NG)
-    "gradient of Conductance at temperature T_ref";
-   parameter Real g_T_ref[NG] = zeros(NG) "gradient Reference temperature";
+    "The gradient of Conductance at temperature T_ref";
+   parameter Real g_T_ref[NG] = zeros(NG) "The gradient Reference temperature";
    parameter Real g_alpha[NG] = zeros(NG)
-    "gradient of Temperature coefficient of conductance ";
+    "The gradient of Temperature coefficient of conductance ";
 
    Real g_G_actual[NG];
 

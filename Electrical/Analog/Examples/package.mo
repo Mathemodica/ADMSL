@@ -1,4 +1,6 @@
 within ADMSL.Electrical.Analog;
-package Examples 
+package Examples "The AD version of Modelica.Electrical.Analog.Examples"
 extends Modelica.Icons.ExamplesPackage;
+
+
 end Examples;

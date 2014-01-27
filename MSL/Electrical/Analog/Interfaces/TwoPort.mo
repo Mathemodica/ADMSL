@@ -1,4 +1,4 @@
-within ADMSL.Electrical.Analog.Interfaces.Bases;
+within ADMSL.MSL.Electrical.Analog.Interfaces;
 partial model TwoPort "Component with two electrical ports, including current"
   Modelica.SIunits.Voltage v1 "Voltage drop over the left port";
   Modelica.SIunits.Voltage v2 "Voltage drop over the right port";

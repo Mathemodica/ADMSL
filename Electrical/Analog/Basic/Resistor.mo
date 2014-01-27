@@ -1,15 +1,17 @@
 within ADMSL.Electrical.Analog.Basic;
-class Resistor
-  extends Bases.Resistor(
+class Resistor "AD version of Modelica.Electrical.Analog.Basic.Resistor"
+  extends MSL.Electrical.Analog.Basic.Resistor(
     redeclare replaceable class OnePort =
         ADMSL.Electrical.Analog.Interfaces.OnePort,
     redeclare replaceable class ConditionalHeatPort =
         ADMSL.Electrical.Analog.Interfaces.ConditionalHeatPort0);
-  extends ADMSL.Interfaces.GradientInfo;
+  extends ADMSL.Utilities.GradientInfo;
 
-  parameter Real g_R[NG] = zeros(NG);
-  parameter Real g_T_ref[NG] = zeros(NG);
-  parameter Real g_alpha[NG] = zeros(NG);
+  parameter Real g_R[NG] = zeros(NG) "The gradient of resistance";
+  parameter Real g_T_ref[NG] = zeros(NG)
+    "The gradient of reference temperature";
+  parameter Real g_alpha[NG] = zeros(NG)
+    "The gradient of temperature coefficients";
 
   Real g_R_actual[NG];
 

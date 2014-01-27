@@ -1,4 +1,4 @@
-within ADMSL.Electrical.Analog.Interfaces.Bases;
+within ADMSL.MSL.Electrical.Analog.Interfaces;
 partial model ConditionalHeatPort
   "Partial model to include a conditional HeatPort in order to describe the power loss via a thermal network"
 

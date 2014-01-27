@@ -1,10 +1,10 @@
 within ADMSL.Electrical.Analog.Interfaces;
 partial model TwoPin
-  extends Bases.TwoPin(redeclare ADMSL.Electrical.Analog.Interfaces.PositivePin
-                                                                                p,
-                       redeclare ADMSL.Electrical.Analog.Interfaces.NegativePin
-                                                                                n);
-  extends ADMSL.Interfaces.GradientInfo;
+  "AD version of Modelica.Electrical.Analog.Interfaces.TwoPin"
+  extends MSL.Electrical.Analog.Interfaces.TwoPin(
+                       redeclare PositivePin p,
+                       redeclare NegativePin n);
+  extends ADMSL.Utilities.GradientInfo;
 
   Real g_v[NG];
 

@@ -1,9 +1,11 @@
 within ADMSL.Electrical.Analog.Interfaces;
 partial model ConditionalHeatPort0
-  extends Bases.ConditionalHeatPort(useHeatPort=false);
-  extends ADMSL.Interfaces.GradientInfo;
+  "AD version of Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort with useHeatPort=false"
+  extends MSL.Electrical.Analog.Interfaces.ConditionalHeatPort(
+                                    useHeatPort=false);
+  extends ADMSL.Utilities.GradientInfo;
 
-  parameter Real g_T[NG] = zeros(NG);
+  parameter Real g_T[NG] = zeros(NG) "The gradient of the fixed temperature";
 
   Real  g_LossPower[NG];
   Real  g_T_heatPort[NG];
