@@ -1,4 +1,7 @@
 TwoPin
 OnePort
+Pin
 TwoPort
 ConditionalHeatPort
+NegativePin
+PositivePin

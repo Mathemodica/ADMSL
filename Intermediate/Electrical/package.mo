@@ -1,4 +1,4 @@
-within ADMSL;
+within ADMSL.Intermediate;
 package Electrical "The AD version of Modelica.Electrical"
   extends Modelica.Icons.Package;
 

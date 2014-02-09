@@ -1,10 +1,9 @@
-within ADMSL.Electrical.Analog.Examples;
-model ChuaCircuit2 "Chua's circuit, ns, V, A"
- // replaceable class Basic = ADMSL.Ectrical.Analog.Basic;
- // replaceable class Utilities = ADMSL.Electrical.Analog.Basic;
+within ADMSL.T1.Electrical.Analog.Examples;
+model ChuaCircuit_all "Chua's circuit, ns, V, A"
 
-  import ADMSL.Electrical.Analog.Basic;
-  import ADMSL.Electrical.Analog.Examples.Utilities;
+  replaceable class Basic = ADMSL.T1.Electrical.Analog.Basic;
+  replaceable class Utilities = ADMSL.T1.Electrical.Analog.Examples.Utilities;
+
   import Modelica.Icons;
   extends Icons.Example;
   import ADMSL.Utilities.*;
@@ -117,4 +116,4 @@ Modelica in file \"Modelica/package.mo\".</i><br>
           extent={{-98,104},{-32,72}},
           lineColor={0,0,255},
           textString="Chua Circuit")}));
-end ChuaCircuit2;
+end ChuaCircuit_all;

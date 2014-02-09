@@ -8,10 +8,10 @@ Description
 =========== 
 
 ADMSL is the Algorithmically Differentiated (AD) version of a part of the Modelica standard package Modelica.Electrical.Analog.Basic. 
-The underlying promising goal it to become the AD version of the Modelica Standard Library. This is where the name ADMSL comes from (Algorithmically differentiated Modelica Standard Library). 
+The underlying promising goal is to become the AD version of the Modelica Standard Library. This is where the name ADMSL comes from (Algorithmically differentiated Modelica Standard Library). 
 
 This library serves as a guide for illustrating equation-based algorithmic differentation techniques for Modelica libraries. 
-An algorithmically differentiated Modelica library contains every thing the original version has together with parameter sensitivities. 
+An algorithmically differentiated Modelica library contains everything the original version has together with parameter sensitivities. 
 The same models relying on that library can evaluates parameter sensitivities with few minimal efforts and slight changes. However these models preserve the same interface and outlook.
 
 
