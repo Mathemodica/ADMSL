@@ -3,9 +3,11 @@ model TestADInductor
 
   inner parameter Integer NG = 2;
 
-  ADMSL.Electrical.Analog.Basic.Ground ground
+  ADMSL.T1.Electrical.Analog.Basic.Ground
+                                       ground
     annotation (Placement(transformation(extent={{-14,-30},{6,-10}})));
-  ADMSL.Electrical.Analog.Basic.Inductor inductor
+  ADMSL.T1.Electrical.Analog.Basic.Inductor
+                                         inductor
     annotation (Placement(transformation(extent={{-14,26},{6,46}})));
 equation
   connect(inductor.n, inductor.p) annotation (Line(

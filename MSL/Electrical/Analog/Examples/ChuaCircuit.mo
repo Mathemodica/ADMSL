@@ -1,47 +1,39 @@
 within ADMSL.MSL.Electrical.Analog.Examples;
-encapsulated model ChuaCircuit "Chua's circuit, ns, V, A"
-  import ADMSL;
- // replaceable class Basic = ADMSL.Ectrical.Analog.Basic;
- // replaceable class Utilities = ADMSL.Electrical.Analog.Basic;
+model ChuaCircuit "Chua's circuit, ns, V, A"
 
-  import ADMSL.Electrical.Analog.Basic;
-  import ADMSL.Electrical.Analog.Examples.Utilities;
+  replaceable package Basic = ADMSL.MSL.Electrical.Analog.Basic;
+  replaceable package Utilities =
+      ADMSL.MSL.Electrical.Analog.Examples.Utilities;
+
   import Modelica.Icons;
   extends Icons.Example;
 
-  ADMSL.MSL.Electrical.Analog.Basic.Inductor
-                       L(L=18) annotation (Placement(transformation(
+  Basic.Inductor       L(L=18) annotation (Placement(transformation(
         origin={-75,38},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  ADMSL.MSL.Electrical.Analog.Basic.Resistor
-                       Ro(R=12.5e-3) annotation (Placement(transformation(
+  Basic.Resistor       Ro(R=12.5e-3) annotation (Placement(transformation(
         origin={-75,-17},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  ADMSL.MSL.Electrical.Analog.Basic.Conductor
-                        G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
+  Basic.Conductor       G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
             {25,88}},      rotation=0)));
-  ADMSL.MSL.Electrical.Analog.Basic.Capacitor
-                        C1(C=10, v(start=4)) annotation (Placement(transformation(
+  Basic.Capacitor       C1(C=10, v(start=4)) annotation (Placement(transformation(
         origin={25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  ADMSL.MSL.Electrical.Analog.Basic.Capacitor
-                        C2(C=100) annotation (Placement(transformation(
+  Basic.Capacitor       C2(C=100) annotation (Placement(transformation(
         origin={-25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  ADMSL.MSL.Electrical.Analog.Examples.Utilities.NonlinearResistor
-                                    Nr(
+  Utilities.NonlinearResistor       Nr(
     Ga(min=-1) = -0.757576,
     Gb(min=-1) = -0.409091,
     Ve=1) annotation (Placement(transformation(
         origin={75,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  ADMSL.MSL.Electrical.Analog.Basic.Ground
-                     Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
+  Basic.Ground       Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
             -62}}, rotation=0)));
 equation
 
