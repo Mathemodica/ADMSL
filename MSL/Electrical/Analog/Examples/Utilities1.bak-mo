@@ -1,0 +1,4 @@
+within ADMSL.MSL.Electrical.Analog.Examples;
+package Utilities1
+  extends Modelica.Icons.BasesPackage;
+end Utilities1;
