@@ -1,4 +1,4 @@
-within ADMSL.UnitTests;
+within ADMSL.Utilities;
 
 model AssertContinuousTrajectory "Assert correctness of a whole solution trajectory"
   input Real T1 "First trajectory";

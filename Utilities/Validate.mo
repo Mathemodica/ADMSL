@@ -1,4 +1,4 @@
-within ADMSL.UnitTests;
+within ADMSL.Utilities;
 
 model Validate "Assert correctness of a whole solution trajectory"
   parameter Real MaxAccErr = 1e-3 "Maximum Accumulation Error";
