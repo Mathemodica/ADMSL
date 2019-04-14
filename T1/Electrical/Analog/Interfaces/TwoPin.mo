@@ -4,11 +4,14 @@ partial model TwoPin
   extends MSL.Electrical.Analog.Interfaces.TwoPin(
                        redeclare PositivePin p,
                        redeclare NegativePin n);
-  extends ADMSL.Utilities.GradientInfo;
+  extends Utilities.GradientInfo;
 
   Real g_v[NG];
 
 equation
-  g_v[1:NG] = p.g_v[1:p.NG] - n.g_v[1:n.NG];
 
+  for i in 1:NG loop
+    g_v[i] = p.g_v[i] - n.g_v[i];
+  end for; 
+  
 end TwoPin;
