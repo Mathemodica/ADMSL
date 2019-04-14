@@ -1,10 +1,10 @@
 within ADMSL.T1.Electrical.Analog.Basic;
-class Conductor "AD version of Modelica.Electrical.Analog.Basic."
+model Conductor "AD version of Modelica.Electrical.Analog.Basic."
   extends MSL.Electrical.Analog.Basic.Conductor(
     redeclare replaceable class OnePort =
         Interfaces.OnePort,
     redeclare replaceable class ConditionalHeatPort =
-        Interfaces.ConditionalHeatPort0);
+        Interfaces.ConditionalHeatPort);
   extends ADMSL.Utilities.GradientInfo;
 
    parameter Real g_G[NG] = zeros(NG)
@@ -56,12 +56,16 @@ equation
   adl_1_2 = G * adl_11_2;
   // g_T_1[1:NG] = g_G[1:NG] * D_11 + adl_1_1 * g_alpha[1:NG]  + adl_1_2 * (g_T_heatPort[1:NG] - g_T_ref[1:NG]);
 
-  // G_actual = T_1
-  g_G_actual[1:NG] = g_G[1:NG] * D_11 + adl_1_1 * g_alpha[1:NG]  + adl_1_2 * (g_T_heatPort[1:NG] - g_T_ref[1:NG]);
 
-  // i = G_actual*v;
-  g_i[1:NG] = g_G_actual[1:NG] * v + G_actual * g_v[1:NG];
+  for ad_i in 1:NG loop
+    // G_actual = T_1
+    g_G_actual[ad_i] = g_G[ad_i] * D_11 + adl_1_1 * g_alpha[ad_i]  + adl_1_2 * (g_T_heatPort[ad_i] - g_T_ref[ad_i]);
 
-  //LossPower = v*i;
-  g_LossPower[1:NG] = g_v[1:NG] * i + v * g_i[1:NG];
+    // i = G_actual*v;
+    g_i[ad_i] = g_G_actual[ad_i] * v + G_actual * g_v[ad_i];
+
+    //LossPower = v*i;
+    g_LossPower[ad_i] = g_v[ad_i] * i + v * g_i[ad_i];
+  end for; 
+  
 end Conductor;
