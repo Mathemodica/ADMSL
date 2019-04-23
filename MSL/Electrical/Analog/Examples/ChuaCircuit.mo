@@ -2,8 +2,7 @@ within ADMSL.MSL.Electrical.Analog.Examples;
 model ChuaCircuit "Chua's circuit, ns, V, A"
 
   replaceable package Basic = ADMSL.MSL.Electrical.Analog.Basic;
-  replaceable package Utilities =
-      ADMSL.MSL.Electrical.Analog.Examples.Utilities;
+  replaceable package Utilities = ADMSL.MSL.Electrical.Analog.Examples.Utilities;
 
   import Modelica.Icons;
   extends Icons.Example;
@@ -11,7 +10,7 @@ model ChuaCircuit "Chua's circuit, ns, V, A"
   Basic.Inductor       L(L=18) annotation (Placement(transformation(
         origin={-75,38},
         extent={{-25,-25},{25,25}},
-        rotation=270)));
+        rotation=270)));  
   Basic.Resistor       Ro(R=12.5e-3) annotation (Placement(transformation(
         origin={-75,-17},
         extent={{-25,-25},{25,25}},

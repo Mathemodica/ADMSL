@@ -2,8 +2,8 @@ within ADMSL.T1.Electrical.Analog.Interfaces;
 partial model OnePort
   "AD version of Modelica.Electrical.Analog.Interfaces.OnePort"
   extends MSL.Electrical.Analog.Interfaces.OnePort(
-                         redeclare PositivePin p,
-                         redeclare NegativePin n);
+                         redeclare ADMSL.T1.Electrical.Analog.Interfaces.NegativePin n,
+                         redeclare PositivePin p);
   extends Utilities.GradientInfo;
 
   Real g_v[NG];

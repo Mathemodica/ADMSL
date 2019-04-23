@@ -2,8 +2,8 @@ within ADMSL.T1.Electrical.Analog.Basic;
 model Resistor "AD version of Modelica.Electrical.Analog.Basic.Resistor"
 
   extends MSL.Electrical.Analog.Basic.Resistor(
-    redeclare replaceable class OnePort =
-        Interfaces.OnePort,
+    redeclare replaceable class OnePortC =
+        ADMSL.T1.Electrical.Analog.Interfaces.OnePort,
     redeclare replaceable class ConditionalHeatPort =
         Interfaces.ConditionalHeatPort);
   extends ADMSL.Utilities.GradientInfo;
