@@ -1,7 +1,7 @@
 within ADMSL.MSL.Electrical.Analog.Basic;
 model Ground "Ground node"
 
-  replaceable Modelica.Electrical.Analog.Interfaces.Pin p
+  replaceable ADMSL.MSL.Electrical.Analog.Interfaces.Pin p
                    annotation (Placement(transformation(
         origin={0,100},
         extent={{10,-10},{-10,10}},
