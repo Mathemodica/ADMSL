@@ -1,5 +1,5 @@
 within ADMSL.UnitTests.Electrical.Analog.Basic;
-model TestInductor
+model TestInductor "examine whether Modelica.*.Indutor checks and translates"
   Modelica.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-14,-20},{6,0}})));
   Modelica.Electrical.Analog.Basic.Inductor inductor
