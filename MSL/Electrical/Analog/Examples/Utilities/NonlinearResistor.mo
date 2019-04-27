@@ -1,8 +1,8 @@
 within ADMSL.MSL.Electrical.Analog.Examples.Utilities;
 model NonlinearResistor "Chua's resistor"
-  replaceable class OnePort =
+  replaceable partial model Port =
       ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
-  extends OnePort;
+  extends Port;
 
   parameter Modelica.SIunits.Conductance Ga
     "Conductance in inner voltage range";
