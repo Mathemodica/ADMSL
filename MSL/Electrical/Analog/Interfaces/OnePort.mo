@@ -4,10 +4,10 @@ partial model OnePort
 
   Modelica.SIunits.Voltage v "Voltage drop between the two pins (= p.v - n.v)";
   Modelica.SIunits.Current i "Current flowing from pin p to pin n";
-  replaceable MSL.Electrical.Analog.Interfaces.PositivePin p
+  replaceable ADMSL.MSL.Electrical.Analog.Interfaces.PositivePin p
     "Positive pin (potential p.v > n.v for positive voltage drop v)"             annotation (Placement(
         transformation(extent={{-110,-10},{-90,10}}, rotation=0)));
-  replaceable MSL.Electrical.Analog.Interfaces.NegativePin n "Negative pin"
+  replaceable ADMSL.MSL.Electrical.Analog.Interfaces.NegativePin n "Negative pin"
                                annotation (Placement(transformation(extent={{
             110,-10},{90,10}}, rotation=0)));
 equation

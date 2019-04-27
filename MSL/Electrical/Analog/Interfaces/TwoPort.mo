@@ -6,7 +6,7 @@ partial model TwoPort "Component with two electrical ports, including current"
     "Current flowing from pos. to neg. pin of the left port";
   Modelica.SIunits.Current i2
     "Current flowing from pos. to neg. pin of the right port";
-  replaceable MSL.Electrical.Analog.Interfaces.PositivePin p1
+  replaceable ADMSL.MSL.Electrical.Analog.Interfaces.PositivePin p1
     "Positive pin of the left port (potential p1.v > n1.v for positive voltage drop v1)"
                                                                                                       annotation (Placement(
         transformation(extent={{-110,40},{-90,60}}, rotation=0)));
