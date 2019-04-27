@@ -6,12 +6,12 @@ model Conductor "Ideal linear electrical conductor"
   parameter Modelica.SIunits.LinearTemperatureCoefficient alpha=0
     "Temperature coefficient of conductance (G_actual = G_ref/(1 + alpha*(T_heatPort - T_ref))";
 
-  replaceable class OnePort = ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
-  extends OnePort;
+  replaceable partial model Port = ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
+  extends Port;
 
-  replaceable class ConditionalHeatPort =
+  replaceable partial model CHPort =
         ADMSL.MSL.Electrical.Analog.Interfaces.ConditionalHeatPort;
-  extends ConditionalHeatPort(T = T_ref);
+  extends CHPort(T = T_ref);
 
   Modelica.SIunits.Conductance G_actual
     "Actual conductance = G_ref/(1 + alpha*(T_heatPort - T_ref))";
