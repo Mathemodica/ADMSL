@@ -2,7 +2,7 @@ within ADMSL.T1.Electrical.Analog.Basic;
 model Capacitor "AD version of Modelica.Electrical.Analog.Basic.Capacitor"
   extends ADMSL.Utilities.GradientInfo;
   extends MSL.Electrical.Analog.Basic.Capacitor(
-    redeclare replaceable class OnePort = Interfaces.OnePort);
+    redeclare replaceable partial model Port = Interfaces.OnePort);
 
   parameter Real g_C[NG] = zeros(NG) "The gradient of capacitance";
 

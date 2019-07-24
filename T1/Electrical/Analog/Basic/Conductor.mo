@@ -1,10 +1,10 @@
 within ADMSL.T1.Electrical.Analog.Basic;
 model Conductor "AD version of Modelica.Electrical.Analog.Basic."
   extends MSL.Electrical.Analog.Basic.Conductor(
-    redeclare replaceable class OnePort =
-        Interfaces.OnePort,
-    redeclare replaceable class ConditionalHeatPort =
-        Interfaces.ConditionalHeatPort);
+    redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort,
+    redeclare replaceable partial model CHPort =
+        ADMSL.T1.Electrical.Analog.Interfaces.ConditionalHeatPort,
+        NG=NG);
   extends ADMSL.Utilities.GradientInfo;
 
    parameter Real g_G[NG] = zeros(NG)
