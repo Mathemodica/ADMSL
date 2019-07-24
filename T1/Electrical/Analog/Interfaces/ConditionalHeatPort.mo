@@ -3,7 +3,6 @@ within ADMSL.T1.Electrical.Analog.Interfaces;
 partial model ConditionalHeatPort 
   "AD version of Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort with useHeatPort=false"
  
-                   
   extends ADMSL.Utilities.GradientInfo; 
   /* extends MSL.Electrical.Analog.Interfaces.ConditionalHeatPort(
       redeclare ADMSL.T1.Thermal.HeatTransfer.Interfaces.HeatPort_a heatPort(
