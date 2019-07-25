@@ -1,8 +1,16 @@
 within ADMSL.T1.Electrical.Analog.Basic;
 model Inductor "AD version of Modelica.Electrical.Analog.Basic.Inductor"
-  extends ADMSL.T1.Electrical.Analog.Interfaces.OnePort(i(start=0));
+  // extends ADMSL.T1.Electrical.Analog.Interfaces.OnePort(i(start=0));
+  
+  /*extends ADMSL.MSL.Electrical.Analog.Basic.Inductor;
+  redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort;     
+  extends Port; */ 
+  
+  extends ADMSL.MSL.Electrical.Analog.Basic.Inductor(
+    redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort);
+  
   //extends Modelica.Electrical.Analog.Interfaces.OnePort(i(start=0));
-  parameter SI.Inductance L(start=1) "Inductance";
+  // parameter SI.Inductance L(start=1) "Inductance";
   parameter Real g_L[NG] = zeros(NG) "The gradient of inductance";
 
 equation
@@ -11,7 +19,7 @@ equation
     g_v[ad_i] = g_L[ad_i] * der(i) + L * der(g_i[ad_i]) ;
   end for; 
   
-  L*der(i) = v;
+ /* L*der(i) = v;
   annotation (
     Documentation(info="<html>
 <p>The linear inductor connects the branch voltage <em>v</em> with the branch current <em>i</em> by <em>v = L * di/dt</em>. The Inductance <em>L</em> is allowed to be positive, or zero.</p>
@@ -50,5 +58,5 @@ equation
           extent={{-150,90},{150,50}},
           textString="%name",
           lineColor={0,0,255})}));
-
+   */ 
 end Inductor;
