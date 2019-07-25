@@ -14,7 +14,7 @@ partial model ConditionalHeatPort
                   T(start=T)=T_heatPort, Q_flow=-LossPower,
                   g_T = g_T_heatPort, g_Q_flow = g_LossPower));*/ 
                   
-  extends MSL.Electrical.Analog.Interfaces.ConditionalHeatPort; 
+  extends Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort; 
   redeclare ADMSL.T1.Thermal.HeatTransfer.Interfaces.HeatPort_a heatPort(
                   T(start=T)=T_heatPort, Q_flow=-LossPower,
                   g_T = g_T_heatPort, g_Q_flow = g_LossPower,NG=NG);
