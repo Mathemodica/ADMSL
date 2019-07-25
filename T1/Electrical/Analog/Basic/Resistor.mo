@@ -1,12 +1,19 @@
 within ADMSL.T1.Electrical.Analog.Basic;
 model Resistor "AD version of Modelica.Electrical.Analog.Basic.Resistor"
 
-  extends MSL.Electrical.Analog.Basic.Resistor(
+  /* extends MSL.Electrical.Analog.Basic.Resistor(
     redeclare replaceable model OnePortC =
         ADMSL.T1.Electrical.Analog.Interfaces.OnePort,
     redeclare replaceable class ConditionalHeatPort =
         Interfaces.ConditionalHeatPort);
-  extends ADMSL.Utilities.GradientInfo;
+  extends ADMSL.Utilities.GradientInfo; */ 
+
+  extends ADMSL.MSL.Electrical.Analog.Basic.Resistor;
+  redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort;     
+  extends Port; 
+
+  redeclare replaceable model CHPort = ADMSL.T1.Electrical.Analog.Interfaces.ConditionalHeatPort;
+  extends CHPort(T = T_ref); 
 
   parameter Real g_R[NG] = zeros(NG) "The gradient of resistance";
   parameter Real g_T_ref[NG] = zeros(NG)
