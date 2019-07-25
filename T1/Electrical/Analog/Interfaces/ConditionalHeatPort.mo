@@ -28,7 +28,7 @@ equation
 
   if not useHeatPort then
      for ad_i in 1 : NG loop 
-      g_T_heatPort[ad_i] = g_T[i];
+      g_T_heatPort[ad_i] = g_T[ad_i];
      end for; 
   end if;
 
