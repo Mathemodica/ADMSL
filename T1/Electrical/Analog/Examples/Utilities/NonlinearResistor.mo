@@ -1,8 +1,12 @@
 within ADMSL.T1.Electrical.Analog.Examples.Utilities;
 model NonlinearResistor
-  extends MSL.Electrical.Analog.Examples.Utilities.NonlinearResistor(
+  /* extends MSL.Electrical.Analog.Examples.Utilities.NonlinearResistor(
            redeclare replaceable class OnePort = Interfaces.OnePort);
-  extends ADMSL.Utilities.GradientInfo;
+  extends ADMSL.Utilities.GradientInfo;*/ 
+  
+  extends ADMSL.MSL.Electrical.Analog.Examples.Utilities.NonlinearResistor;
+  redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort;     
+  extends Port; 
 
   parameter Real g_Ga[NG] = zeros(NG)
     "gradient of Conductance in inner voltage range";
