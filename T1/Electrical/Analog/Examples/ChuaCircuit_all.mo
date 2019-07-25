@@ -1,44 +1,45 @@
 within ADMSL.T1.Electrical.Analog.Examples;
 model ChuaCircuit_all "Chua's circuit, ns, V, A"
 
-  replaceable class Basic = ADMSL.T1.Electrical.Analog.Basic;
-  replaceable class Utilities = ADMSL.T1.Electrical.Analog.Examples.Utilities;
+  /* replaceable package Basic = ADMSL.T1.Electrical.Analog.Basic;
+  replaceable package Utilities = ADMSL.T1.Electrical.Analog.Examples.Utilities;*/ 
 
   import Modelica.Icons;
   extends Icons.Example;
   import ADMSL.Utilities.*;
 
-  inner parameter Integer NG = 8;
+  // inner parameter Integer NG = 8;
+  parameter Integer NG = 8; 
 
   // parameter Real e1[NG] = {unitVector(1,NG)};
   // parameter Real e2[NG] = {unitVector(2,NG)};
 
-  Basic.Inductor L(L=18,g_L=unitVector(1,NG)) annotation (Placement(transformation(
+  ADMSL.T1.Electrical.Analog.Basic.Inductor L(L=18,g_L=unitVector(1,NG),NG=NG) annotation (Placement(transformation(
         origin={-75,38},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Basic.Resistor Ro(R=12.5e-3,g_R=unitVector(2,NG)) annotation (Placement(transformation(
+  ADMSL.T1.Electrical.Analog.Basic.Resistor Ro(R=12.5e-3,g_R=unitVector(2,NG),NG=NG) annotation (Placement(transformation(
         origin={-75,-17},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Basic.Conductor G(G=0.565,g_G=unitVector(3,NG)) annotation (Placement(transformation(extent={{-25,38},
+  ADMSL.T1.Electrical.Analog.Basic.Conductor G(G=0.565,g_G=unitVector(3,NG),NG=NG) annotation (Placement(transformation(extent={{-25,38},
             {25,88}},      rotation=0)));
-  Basic.Capacitor C1(C=10, g_C=unitVector(4,NG),v(start=4)) annotation (Placement(transformation(
+  ADMSL.T1.Electrical.Analog.Basic.Capacitor C1(C=10, g_C=unitVector(4,NG),v(start=4),NG=NG) annotation (Placement(transformation(
         origin={25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Basic.Capacitor C2(C=100,g_C=unitVector(5,NG)) annotation (Placement(transformation(
+  ADMSL.T1.Electrical.Analog.Basic.Capacitor C2(C=100,g_C=unitVector(5,NG),NG=NG) annotation (Placement(transformation(
         origin={-25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Utilities.NonlinearResistor Nr(
+  ADMSL.T1.Electrical.Analog.Examples.Utilities.NonlinearResistor Nr(
     Ga(min=-1) = -0.757576, g_Ga = unitVector(6,NG),
     Gb(min=-1) = -0.409091, g_Gb = unitVector(7,NG),
-    Ve=1,g_Ve = unitVector(8,NG)) annotation (Placement(transformation(
+    Ve=1,g_Ve = unitVector(8,NG),NG=NG) annotation (Placement(transformation(
         origin={75,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Basic.Ground Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
+  ADMSL.T1.Electrical.Analog.Basic.Ground Gnd(NG=NG) annotation (Placement(transformation(extent={{-25,-112},{25,
             -62}}, rotation=0)));
 equation
 
