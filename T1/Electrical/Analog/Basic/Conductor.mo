@@ -11,7 +11,7 @@ model Conductor "AD version of Modelica.Electrical.Analog.Basic."
   redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort;
   redeclare replaceable partial model CHPort = ADMSL.T1.Electrical.Analog.Interfaces.ConditionalHeatPort;     
   extends Port;
-  extends CHPort;  
+  extends CHPort(T = T_ref,g_T=g_T_ref);  
 
    parameter Real g_G[NG] = zeros(NG)
     "The gradient of Conductance at temperature T_ref";

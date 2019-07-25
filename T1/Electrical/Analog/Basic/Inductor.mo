@@ -4,7 +4,7 @@ model Inductor "AD version of Modelica.Electrical.Analog.Basic.Inductor"
   
   extends ADMSL.MSL.Electrical.Analog.Basic.Inductor;
   redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort;     
-  extends Port(i(start=0)); 
+  extends Port; 
   
   //extends Modelica.Electrical.Analog.Interfaces.OnePort(i(start=0));
   // parameter SI.Inductance L(start=1) "Inductance";

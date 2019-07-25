@@ -13,7 +13,7 @@ model Resistor "AD version of Modelica.Electrical.Analog.Basic.Resistor"
   extends Port; 
 
   redeclare replaceable model CHPort = ADMSL.T1.Electrical.Analog.Interfaces.ConditionalHeatPort;
-  extends CHPort(T = T_ref); 
+  extends CHPort(T = T_ref,g_T = g_T_ref); 
 
   parameter Real g_R[NG] = zeros(NG) "The gradient of resistance";
   parameter Real g_T_ref[NG] = zeros(NG)
