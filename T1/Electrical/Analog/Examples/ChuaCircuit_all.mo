@@ -1,18 +1,11 @@
 within ADMSL.T1.Electrical.Analog.Examples;
 model ChuaCircuit_all "Chua's circuit, ns, V, A"
 
-  /* replaceable package Basic = ADMSL.T1.Electrical.Analog.Basic;
-  replaceable package Utilities = ADMSL.T1.Electrical.Analog.Examples.Utilities;*/ 
-
   import Modelica.Icons;
   extends Icons.Example;
   import ADMSL.Utilities.*;
 
-  // inner parameter Integer NG = 8;
   parameter Integer NG = 8; 
-
-  // parameter Real e1[NG] = {unitVector(1,NG)};
-  // parameter Real e2[NG] = {unitVector(2,NG)};
 
   ADMSL.T1.Electrical.Analog.Basic.Inductor L(L=18,g_L=unitVector(1,NG),NG=NG) annotation (Placement(transformation(
         origin={-75,38},

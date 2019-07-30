@@ -1,17 +1,7 @@
 within ADMSL.T1.Electrical.Analog.Examples;
 model ChuaCircuit
-  /* extends ADMSL.MSL.Electrical.Analog.Examples.ChuaCircuit(
-    redeclare replaceable package Basic = ADMSL.T1.Electrical.Analog.Basic,
-    redeclare replaceable package Utilities = ADMSL.T1.Electrical.Analog.Examples.Utilities);
-    Does not work with OMC 
-  */ 
   extends ADMSL.Utilities.GradientInfo;
   
-  /* replaceable package Component = ADMSL.T1.Electrical.Analog.Basic;
-  replaceable package Util      = ADMSL.T1.Electrical.Analog.Examples.Utilities;*/ 
-  // inner parameter Integer NG = 0; 
-  
-
   import Modelica.Icons;
   extends Icons.Example;
 
