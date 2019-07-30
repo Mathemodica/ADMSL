@@ -2,12 +2,8 @@ within ADMSL.T1.Electrical.Analog.Interfaces;
 partial model OnePort
   "AD version of Modelica.Electrical.Analog.Interfaces.OnePort"
   extends ADMSL.Utilities.GradientInfo;
-  extends ADMSL.MSL.Electrical.Analog.Interfaces.OnePort; 
   
-  redeclare ADMSL.T1.Electrical.Analog.Interfaces.NegativePin n(NG=NG); 
-  redeclare ADMSL.T1.Electrical.Analog.Interfaces.PositivePin p(NG=NG);
-  
-  /* SI.Voltage v "Voltage drop between the two pins (= p.v - n.v)";
+  SI.Voltage v "Voltage drop between the two pins (= p.v - n.v)";
   SI.Current i "Current flowing from pin p to pin n";
   
   ADMSL.T1.Electrical.Analog.Interfaces.PositivePin p(NG=NG) 
@@ -17,7 +13,7 @@ partial model OnePort
   ADMSL.T1.Electrical.Analog.Interfaces.NegativePin n(NG=NG) 
     "Negative pin"
                                annotation (Placement(transformation(extent={{
-            110,-10},{90,10}}, rotation=0)));*/  
+            110,-10},{90,10}}, rotation=0))); 
   
   Real g_v[NG];
   Real g_i[NG];
@@ -30,7 +26,7 @@ equation
     g_i[ad_i] = p.g_i[ad_i];
   end for; 
   
-  /*v = p.v - n.v;
+  v = p.v - n.v;
   0 = p.i + n.i;
   i = p.i;
   annotation (
@@ -71,5 +67,5 @@ equation
           extent={{90,45},{110,25}},
           lineColor={160,160,164},
           textString="i")}));
-    */      
+  
 end OnePort;
