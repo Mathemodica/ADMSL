@@ -6,7 +6,8 @@ model Conductor "Ideal linear electrical conductor"
   parameter Modelica.SIunits.LinearTemperatureCoefficient alpha=0
     "Temperature coefficient of conductance (G_actual = G_ref/(1 + alpha*(T_heatPort - T_ref))";
 
-  replaceable partial model Port = ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
+  replaceable partial model Port =
+      ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
   extends Port;
 
   replaceable partial model CHPort =

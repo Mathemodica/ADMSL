@@ -2,7 +2,6 @@ within ADMSL.MSL.Electrical.Analog.Basic;
 model Capacitor "Ideal linear electrical capacitor"
   replaceable partial model Port =
       ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
-   // constrainedby Modelica.Electrical.Analog.Interfaces.OnePort;
   extends Port;
   parameter Modelica.SIunits.Capacitance C(start=1) "Capacitance";
 
