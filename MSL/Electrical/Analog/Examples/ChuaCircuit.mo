@@ -10,7 +10,7 @@ model ChuaCircuit "Chua's circuit, ns, V, A"
   Component.Inductor       L(L=18) annotation (Placement(transformation(
         origin={-75,38},
         extent={{-25,-25},{25,25}},
-        rotation=270)));  
+        rotation=270)));
   Component.Resistor       Ro(R=12.5e-3) annotation (Placement(transformation(
         origin={-75,-17},
         extent={{-25,-25},{25,25}},
@@ -32,7 +32,7 @@ model ChuaCircuit "Chua's circuit, ns, V, A"
         origin={75,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Component.Ground       Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
+  Basic.Ground Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
             -62}}, rotation=0)));
 equation
 
