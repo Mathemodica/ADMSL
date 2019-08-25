@@ -5,23 +5,20 @@ partial model ConditionalHeatPort
   parameter Boolean useHeatPort = false "=true, if heatPort is enabled"
   annotation(Evaluate=true, HideResult=true, choices(checkBox=true));
   parameter Modelica.SIunits.Temperature T=293.15
-    "Fixed device temperature if useHeatPort = false" annotation(Dialog(enable=not useHeatPort));
-  replaceable ADMSL.MSL.Thermal.HeatTransfer.Interfaces.HeatPort_a heatPort(T(start=T)=T_heatPort, Q_flow=-LossPower) if useHeatPort
+    "Fixed device temperature if useHeatPort = false"
+    annotation (Dialog(enable=not useHeatPort));
+  replaceable Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatPort(T(start=T)=T_heatPort, Q_flow=-LossPower) if useHeatPort
     "Conditional heat port"
     annotation (Placement(transformation(extent={{-10,-110},{10,-90}}),
         iconTransformation(extent={{-10,-110},{10,-90}})));
   Modelica.SIunits.Power LossPower "Loss power leaving component via heatPort";
   Modelica.SIunits.Temperature T_heatPort "Temperature of heatPort";
-
-
 equation
   if not useHeatPort then
      T_heatPort = T;
   end if;
 
-  annotation (Icon(coordinateSystem(preserveAspectRatio=true, extent={{-100,
-            -100},{100,100}}),                                                                 graphics),
-    Documentation(revisions="<html>
+  annotation (      Documentation(revisions="<html>
 <ul>
 <li><i> February 17, 2009   </i>
        by Christoph Clauss<br> initially implemented<br>

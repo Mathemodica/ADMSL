@@ -1,22 +1,17 @@
 within ADMSL.MSL.Electrical.Analog.Interfaces;
 partial model TwoPin "Component with two electrical pins"
   Modelica.SIunits.Voltage v "Voltage drop between the two pins (= p.v - n.v)";
-  replaceable ADMSL.MSL.Electrical.Analog.Interfaces.PositivePin p
+  replaceable Modelica.Electrical.Analog.Interfaces.PositivePin p
     "Positive pin Positive pin (potential p.v > n.v for positive voltage drop v)"
-                                                                                              annotation (Placement(
-        transformation(extent={{-110,-10},{-90,10}}, rotation=0)));
-
-  replaceable ADMSL.MSL.Electrical.Analog.Interfaces.NegativePin n "Negative pin"
-                               annotation (Placement(transformation(extent={{
-            90,-10},{110,10}}, rotation=0)));
-
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
+  replaceable Modelica.Electrical.Analog.Interfaces.NegativePin n "Negative pin"
+    annotation (Placement(transformation(extent={{90,-10},{110,10}})));
 equation
   v = p.v - n.v;
   annotation (
     Diagram(coordinateSystem(
         preserveAspectRatio=true,
-        extent={{-100,-100},{100,100}},
-        grid={1,1}), graphics={
+        extent={{-100,-100},{100,100}}), graphics={
         Polygon(
           points={{-120,3},{-110,0},{-120,-3},{-120,3}},
           lineColor={160,160,164},
