@@ -1,19 +1,21 @@
 within ADMSL.T1.Electrical.Analog.Basic;
 model Conductor "AD version of Modelica.Electrical.Analog.Basic."
-  extends MSL.Electrical.Analog.Basic.Conductor(
-    redeclare replaceable partial model Port = ADMSL.T1.Electrical.Analog.Interfaces.OnePort,
-    redeclare replaceable partial model CHPort =
-        ADMSL.T1.Electrical.Analog.Interfaces.ConditionalHeatPort,
-        NG=NG);
-  extends ADMSL.Utilities.GradientInfo;
+  // extends ADMSL.Utilities.GradientInfo;
 
-   parameter Real g_G[NG] = zeros(NG)
+  extends MSL.Electrical.Analog.Basic.Conductor(
+    redeclare replaceable partial model Port =
+      ADMSL.T1.Electrical.Analog.Interfaces.OnePort,
+    redeclare replaceable partial model CHPort =
+      ADMSL.T1.Electrical.Analog.Interfaces.ConditionalHeatPort1);
+
+
+   parameter Real g_G[p.NG] = zeros(p.NG)
     "The gradient of Conductance at temperature T_ref";
-   parameter Real g_T_ref[NG] = zeros(NG) "The gradient Reference temperature";
-   parameter Real g_alpha[NG] = zeros(NG)
+   parameter Real g_T_ref[p.NG] = zeros(p.NG) "The gradient Reference temperature";
+   parameter Real g_alpha[p.NG] = zeros(p.NG)
     "The gradient of Temperature coefficient of conductance ";
 
-   Real g_G_actual[NG];
+   Real g_G_actual[p.NG];
 
 protected
   Real T_1111;
@@ -57,7 +59,7 @@ equation
   // g_T_1[1:NG] = g_G[1:NG] * D_11 + adl_1_1 * g_alpha[1:NG]  + adl_1_2 * (g_T_heatPort[1:NG] - g_T_ref[1:NG]);
 
 
-  for ad_i in 1:NG loop
+  for ad_i in 1:p.NG loop
     // G_actual = T_1
     g_G_actual[ad_i] = g_G[ad_i] * D_11 + adl_1_1 * g_alpha[ad_i]  + adl_1_2 * (g_T_heatPort[ad_i] - g_T_ref[ad_i]);
 
@@ -66,6 +68,6 @@ equation
 
     //LossPower = v*i;
     g_LossPower[ad_i] = g_v[ad_i] * i + v * g_i[ad_i];
-  end for; 
-  
+  end for;
+
 end Conductor;

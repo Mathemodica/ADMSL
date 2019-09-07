@@ -3,4 +3,5 @@ NegativePin
 PositivePin
 TwoPin
 OnePort
-ConditionalHeatPort
+ConditionalHeatPort1
+ConditionalHeatPort0
