@@ -12,7 +12,7 @@ model Resistor "Ideal linear electrical resistor"
   replaceable partial model CHPort =
         ADMSL.MSL.Electrical.Analog.Interfaces.ConditionalHeatPort1;
   extends CHPort(                    T = T_ref);
-  Modelica.SIunits.Resistance R_actual(stateSelect=StateSelect.always)
+  Modelica.SIunits.Resistance R_actual
     "Actual resistance = R*(1 + alpha*(T_heatPort - T_ref))";
 
 equation

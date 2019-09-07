@@ -10,7 +10,7 @@ partial model ConditionalHeatPort1
     annotation (Placement(transformation(extent={{-10,-110},{10,-90}}),
         iconTransformation(extent={{-10,-110},{10,-90}})));
   Modelica.SIunits.Power LossPower "Loss power leaving component via heatPort";
-  Modelica.SIunits.Temperature T_heatPort(stateSelect=StateSelect.never) "Temperature of heatPort";
+  Modelica.SIunits.Temperature T_heatPort "Temperature of heatPort";
 equation
 /*  if not useHeatPort then
      T_heatPort = T;
