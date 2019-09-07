@@ -28,8 +28,9 @@ Release Notes
 
 current release 1.0 
 
-r1.0-alpha : 26.01.2014 - Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
-r1.1.0-alpha : 7.9.2019 - Improving the overall formulation 
+v1.0-alpha : 26.01.2014 - Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
+v1.1.0-alpha : 7.9.2019 - Improving the overall formulation 
+
 Currently the existing example does not simulate due to division by 0 error. If you are interested to find out what 
 is going wrong, have a look at ADMSL.MSL.Electrical.Analog.Examples.ChuaCircuit. 
 
@@ -49,7 +50,9 @@ Atiyah Elsheikh (Email: Atiyah.Elsheikh@ait.ac.at)
 Tested with
 ===========
 
-Dymola 2014, Modelica library 3.2
+- OpenModelica 1.13.2 
+- Dymola 2018  
+- MSL 3.2.2
 
 
 Literature
@@ -57,16 +60,28 @@ Literature
 
 Please cite: 
 
-1- Atiyah Elsheikh, Modeling parameter sensitivities via equation-based algorithmic differentiation techniques -- The ADMSL.Electrical.Analog.Library,
-Modelica'2014: The 10th International Modelica Conference, Mar. 2014 Lund, Sweden, 
-2- Atiyah Elsheikh, Modelica-based computational tools for sensitivity analysis via automatic differentiation, Dissertation, RWTH Aachen University, Aachen, Germany, 2011. 
-3- Atiyah Elsheikh, ADGenKinetics: An algorithmically differentiated library for biochemical networks modeling via simplified kinetics formats
+1. Atiyah Elsheikh, Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models, Modelica'2019: The 13th International Modelica Conference, Regensburg, Germany, 2019
+2. Atiyah Elsheikh, Modeling parameter sensitivities via equation-based algorithmic differentiation techniques -- The ADMSL.Electrical.Analog.Library,
+Modelica'2014: The 10th International Modelica Conference, Lund, Sweden, 2014 
+3. Atiyah Elsheikh, Modelica-based computational tools for sensitivity analysis via automatic differentiation, Dissertation, RWTH Aachen University, Aachen, Germany, 2011 
+4. Atiyah Elsheikh, ADGenKinetics: An algorithmically differentiated library for biochemical networks modeling via simplified kinetics formats
 
 
 Online version of the paper can be found here: 
 http://www.researchgate.net/profile/Atiyah_Elsheikh/publications/ 
 
 Bibtex source: 
+
+@Conference{Elsheikh2019,
+  author        = {Atiyah Elsheikh},
+  title         = {{Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models}},
+  booktitle     = {Modelica'2019: The 13th International Modelica Conference},
+  year          = {2019},
+  address       = {Regensburg, Germany},
+  month         = {Mar.},
+  owner         = {ElsheikhA},
+}
+
 @CONFERENCE{Elsheikh2014a,
   author = {Atiyah Elsheikh},
   title = {Modeling parameter sensitivities via equation-based algorithmic differentiation techniques: The {ADMSL.Electrical.Analog} library},
