@@ -1,5 +1,5 @@
-﻿ADMSL
-=====
+﻿ADMSL - Dymola branch
+====================== 
 
 Algorithmically Differentiated Library of a part of the standard library Modelica.Electrical.Analog.Basic 
 
@@ -28,9 +28,10 @@ Release Notes
 
 current release 1.0 
 
-
-r1.0 : 26.01.2014 - Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
-
+r1.0-alpha : 26.01.2014 - Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
+r1.1.0-alpha : 7.9.2019 - Improving the overall formulation 
+Currently the existing example does not simulate due to division by 0 error. If you are interested to find out what 
+is going wrong, have a look at ADMSL.MSL.Electrical.Analog.Examples.ChuaCircuit. 
 
 License
 =======
