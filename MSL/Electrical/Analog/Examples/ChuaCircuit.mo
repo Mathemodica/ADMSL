@@ -104,7 +104,7 @@ Modelica in file \"Modelica/package.mo\".</i><br>
 <p>
 </dl>
 </html>"),
-    experiment(StopTime=1),
+    experiment(StopTime=1000),
     Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,-100},{
             100,100}}), graphics={Text(
           extent={{-98,104},{-32,72}},
