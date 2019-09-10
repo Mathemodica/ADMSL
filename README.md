@@ -51,8 +51,8 @@ Tested with
 ===========
 
 - OpenModelica 1.13.2 
-- Dymola 2018  
-- MSL 3.2.2
+- Dymola 2020  
+- MSL 3.2.3
 
 
 Literature
