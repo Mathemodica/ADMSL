@@ -11,7 +11,7 @@ model Conductor "Ideal linear electrical conductor"
   extends Port;
 
   replaceable partial model CHPort =
-        ADMSL.MSL.Electrical.Analog.Interfaces.ConditionalHeatPort;
+        ADMSL.MSL.Electrical.Analog.Interfaces.ConditionalHeatPort1;
   extends CHPort(T = T_ref);
 
   Modelica.SIunits.Conductance G_actual
