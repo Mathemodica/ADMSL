@@ -1,23 +1,31 @@
 within ADMSL.MSL.Electrical.Analog.Examples;
-model ChuaCircuit "Chua's circuit, ns, V, A"
+model ChuaCircuit0 "Chua's circuit with heat ports non enabled"
 
   replaceable package Component =
       ADMSL.MSL.Electrical.Analog;
   replaceable package Util =
       Component.Examples.Utilities;
+  replaceable model Resistor0 =
+      Component.Basic.Resistor (
+    redeclare replaceable partial model CHPort =
+          Component.Interfaces.ConditionalHeatPort0);
+  replaceable model Conductor0 =
+      Component.Basic.Conductor (
+     redeclare replaceable partial model CHPort =
+          Component.Interfaces.ConditionalHeatPort0);
 
   import Modelica.Icons;
   extends Icons.Example;
 
-  Component.Basic.Inductor        L(L=18) annotation (Placement(transformation(
+  Component.Basic.Inductor       L(L=18) annotation (Placement(transformation(
         origin={-75,38},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Component.Basic.Resistor        Ro(R=12.5e-3) annotation (Placement(transformation(
+  Resistor0       Ro(R=12.5e-3) annotation (Placement(transformation(
         origin={-75,-17},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Component.Basic.Conductor       G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
+  Conductor0       G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
             {25,88}},      rotation=0)));
   Component.Basic.Capacitor       C1(C=10, v(start=4)) annotation (Placement(transformation(
         origin={25,3},
@@ -27,7 +35,7 @@ model ChuaCircuit "Chua's circuit, ns, V, A"
         origin={-25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Util.NonlinearResistor          Nr(
+  Util.NonlinearResistor       Nr(
     Ga(min=-1) = -0.757576,
     Gb(min=-1) = -0.409091,
     Ve=1) annotation (Placement(transformation(
@@ -112,4 +120,4 @@ Modelica in file \"Modelica/package.mo\".</i><br>
           extent={{-98,104},{-32,72}},
           lineColor={0,0,255},
           textString="Chua Circuit")}));
-end ChuaCircuit;
+end ChuaCircuit0;

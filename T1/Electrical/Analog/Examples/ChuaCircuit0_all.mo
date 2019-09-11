@@ -1,6 +1,6 @@
 within ADMSL.T1.Electrical.Analog.Examples;
-model ChuaCircuit_all
-  "Dynamic parameter sensitivities of the Chua Circuit Example with all parameters are active / heat port is disabled"
+model ChuaCircuit0_all
+  "Dynamic parameter sensitivities of the Chua Circuit Example with all parameters are active"
   import ADMSL.Utilities.unitVector;
 
   extends ChuaCircuit0(
@@ -11,4 +11,4 @@ model ChuaCircuit_all
     C1(g_C=unitVector(4,NG)),
     C2(g_C=unitVector(5,NG)),
     Nr(g_Ga = unitVector(6,NG),g_Gb = unitVector(7,NG),g_Ve = unitVector(8,NG)));
-end ChuaCircuit_all;
+end ChuaCircuit0_all;

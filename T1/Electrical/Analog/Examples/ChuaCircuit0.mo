@@ -1,7 +1,10 @@
 within ADMSL.T1.Electrical.Analog.Examples;
-model ChuaCircuit "An algorithmically differentiated version of the MSL standard Chua Circuit example with no active parameter"
+model ChuaCircuit0
+  "An algorithmically differentiated version of the MSL standard Chua Circuit example with no active parameter 
+  / heat port is not enabled "
 
-  extends ADMSL.MSL.Electrical.Analog.Examples.ChuaCircuit(
+  extends
+    ADMSL.MSL.Electrical.Analog.Examples.ChuaCircuit0(
     redeclare replaceable package Component =
       ADMSL.T1.Electrical.Analog,
     redeclare replaceable package Util =
@@ -9,4 +12,4 @@ model ChuaCircuit "An algorithmically differentiated version of the MSL standard
 
   inner parameter Integer NG = 0 "number of active parameters";
 
-end ChuaCircuit;
+end ChuaCircuit0;
