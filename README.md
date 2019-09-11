@@ -4,6 +4,12 @@
 Algorithmically Differentiated Library of a part of the standard library Modelica.Electrical.Analog.Basic 
 
 
+Author 
+======
+
+Atiyah Elsheikh (Email: Atiyah.Elsheikh@mathemodica.com)  
+See [my Profile](http://mathemodica.com/members/atiyah/)
+
 Description
 =========== 
 
@@ -23,79 +29,90 @@ It represents a testing platform for algoirhtmic differerntiation of Modelica li
 ![logo](logo.jpg)
 
 
-Release Notes 
-============= 
+Further contribution
+====================
 
-current release 1.0 
+Further contribution / collaboration on the topic of algorithmic differentiation of Modelica libraries are welcome. 
+Please consult [HowToAddComponent](https://github.com/AtiyahElsheikh/ADMSL/blob/master/UserGuide/HowToAddComponent.mo) using a
+a Modelica simulation environment.   
 
-v1.0-alpha : 26.01.2014 - Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
-v1.1.0-alpha : 7.9.2019 - Improving the overall formulation 
 
-Currently the existing example does not simulate due to division by 0 error. If you are interested to find out what 
-is going wrong, have a look at ADMSL.MSL.Electrical.Analog.Examples.ChuaCircuit. 
+Current Release 
+================
 
-License
+current release is V1.1.0-alpha (Hamburg Release). Detailed release notes can be consulted [here](https://github.com/AtiyahElsheikh/ADMSL/blob/master/UserGuide/ReleaseNotes.mo) 
+using a Modelica simulation environment. 
+
+History
 =======
+
+* v1.1.0-alpha (Hamburg Release )   :   September 2019  
+	- Improving the overall formulation and working version with OpenModelica 1.13.0
+
+* v1.0         (Vienna Release)     :   January 2014 
+	- Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
+
+
+License V1.1.0 (Hamburg)
+========================
+
+Copyright © 2019, Mathemodica.com
+This Modelica package is free software and the use is completely at your own risk;
+it can be redistributed and/or modified under the terms of the [3-BSD License of Modelica Association](https://www.modelica.org/licenses/modelica-3-clause-bsd).
+
+License V1.0 (Vienna) 
+======================
 
 Copyright © 2013, Austrian Institute of Technology, Energy Department, Complex Energy Systems
 This Modelica package is free software and the use is completely at your own risk;
 it can be redistributed and/or modified under the terms of the [Modelica License 2](https://modelica.org/licenses/ModelicaLicense2).
 
-Author 
-======
-
-Atiyah Elsheikh (Email: Atiyah.Elsheikh@ait.ac.at)  
-
 
 Tested with
-===========
+============
 
 - OpenModelica 1.13.2 
 - Dymola 2020  
 - MSL 3.2.3
 
 
-Literature
+References 
 ==========
 
-Please cite: 
+Atiyah Elsheikh, Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models, Modelica'2019: The 13th International Modelica Conference, Regensburg, Germany, 2019
+Atiyah Elsheikh, Modeling parameter sensitivities via equation-based algorithmic differentiation techniques: The ADMSL.Electrical.Analog.Library, Modelica'2014: The 10th International Modelica Conference, Lund, Sweden, 2014
+Atiyah Elsheikh, Modelica-based computational tools for sensitivity analysis via automatic differentiation, Dissertation, RWTH Aachen university, 2013. 
+Atiyah Elsheikh, ADGenKinetics: An algorithmically differentiated library for biochemical networks modeling via simplified kinetics formats, Modelica'2012, Munich, Germany, 2012  
 
-1. Atiyah Elsheikh, Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models, Modelica'2019: The 13th International Modelica Conference, Regensburg, Germany, 2019
-2. Atiyah Elsheikh, Modeling parameter sensitivities via equation-based algorithmic differentiation techniques -- The ADMSL.Electrical.Analog.Library,
-Modelica'2014: The 10th International Modelica Conference, Lund, Sweden, 2014 
-3. Atiyah Elsheikh, Modelica-based computational tools for sensitivity analysis via automatic differentiation, Dissertation, RWTH Aachen University, Aachen, Germany, 2011 
-4. Atiyah Elsheikh, ADGenKinetics: An algorithmically differentiated library for biochemical networks modeling via simplified kinetics formats
-
-
-Online version of the paper can be found here: 
+Online versions of the paper can be found here: 
 http://www.researchgate.net/profile/Atiyah_Elsheikh/publications/ 
 
-Bibtex source: 
+Bibtex sources 
+==============
 
 @Conference{Elsheikh2019,
-  author        = {Atiyah Elsheikh},
-  title         = {{Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models}},
-  booktitle     = {Modelica'2019: The 13th International Modelica Conference},
-  year          = {2019},
-  address       = {Regensburg, Germany},
-  month         = {Mar.},
-  owner         = {ElsheikhA},
+author = {Atiyah Elsheikh},
+title = {{Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models}},
+booktitle = {Modelica'2019: The 13th International Modelica Conference},
+year = {2019},
+address = {Regensburg, Germany},
+month = {Mar.},
 }
 
 @CONFERENCE{Elsheikh2014a,
-  author = {Atiyah Elsheikh},
-  title = {Modeling parameter sensitivities via equation-based algorithmic differentiation techniques: The {ADMSL.Electrical.Analog} library},
-  booktitle = {Modelica'2014: The 10th International Modelica Conference},
-  year = {2014},
-  address = {Lund, Sweden},
-  month = {Mar.}
-}
+author = {Atiyah Elsheikh},
+title = {Modeling parameter sensitivities via equation-based algorithmic differentiation techniques: The {ADMSL.Electrical.Analog} library},
+booktitle = {Modelica'2014: The 10th International Modelica Conference},
+year = {2014},
+address = {Lund, Sweden},
+month = {Mar.}
+}
 
-@PHDTHESIS{Elsheikh2011,
+@PHDTHESIS{Elsheikh2013,
 author = {Atiyah Elsheikh},
 title = {Modelica-based computational tools for sensitivity analysis via automatic differentiation},
 school = {RWTH Aachen university},
-year = {2011},
+year = {2013},
 type = {Dissertation},
 address = {Aachen, Germany}
 }
@@ -113,8 +130,3 @@ month = {Sep.},
 doi = {ecp12076915}
 }
 
-
-Further contribution
-====================
-
-Further contribution / collaboration on the topic of algorithmic differentiation of Modelica libraries are welcome   
