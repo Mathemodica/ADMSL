@@ -2,18 +2,10 @@ within ADMSL.UserGuide;
 model Overview "The main contents and the usage of the library"
   extends Modelica.Icons.Information;
   annotation (Documentation(info="<html>
-<h4><span style=\"color: #008000\">About</span></h4>
+<p align=\"center\"><h4><span style=\"color: #008000\">About</span></h4></p>
 <p>ADMSL is the Algorithmically Differentiated (AD) version of a part of the Modelica standard package <a href=\"Modelica.Electrical.Analog.Basic\">Modelica.Electrical.Analog.Basic</a>. The underlying promising goal it to become the AD version of the Modelica Standard Library. This is where the name ADMSL comes from (Algorithmically differentiated Modelica Standard Library). </p>
 <p>This library serves as a guide for illustrating equation-based algorithmic differentation techniques for differentiating Modelica libraries. An algorithmically differentiated Modelica library contains every thing the original version has together with parameter sensitivities. The same models relying on that library additionally evaluates parameter sensitivities with few minimal efforts and slight changes. However these models preserve the same interface and outlook.</p>
-<p><br><b><span style=\"color: #008000;\">Structure of the Library</span></b></p>
-<p><br>The following packages are available: </p>
-<ul>
-<li><i>MSL</i>: Duplicated slightly modified version of some compnents within the Modelica Standard Library</li>
-<li>T1: Tangent linear first order model of the MSL very similar to the Intermediate package but the components are post-processed for improved performance</li>
-<li><i>UnitTests</i>: Unit tests for components </li>
-<li><i>Utilities</i>: Basic functions for AD components and unit tests<br></li>
-</ul>
-<h4><span style=\"color: #008000\">Implementation</span></h4>
+<p><br><b><span style=\"color: #008000;\">Implementation</span></b></p>
 <p><br>This library is an algorithmically differentiated version of the Modelica supackage <a href=\"Modelica.Electrical.Analog.Basic\">Modelica.Electrical.Analog.Basic</a>. It is the result of applying some simple code generation rules. </p>
 <p>The following rules for the declaration part and the equation part are used for computing algorithmically differentiated versions: </p>
 <h4>1. Declaration rule: structure duplications </h4>
