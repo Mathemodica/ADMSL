@@ -1,5 +1,5 @@
 within ADMSL.T1.Electrical.Analog.Examples;
-model ChuaCircuit
+model ChuaCircuit "AD Version of Chua Circuit Standard Example" 
   extends ADMSL.Utilities.GradientInfo;
   
   import Modelica.Icons;
