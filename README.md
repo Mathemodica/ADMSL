@@ -1,13 +1,12 @@
-﻿ADMSL - Dymola branch
+ADMSL - Dymola branch
 ====================== 
 
 Algorithmically Differentiated Library of a part of the standard library Modelica.Electrical.Analog.Basic 
 
-
 Author 
 ======
 
-Atiyah Elsheikh (Email: Atiyah.Elsheikh@mathemodica.com)  
+Atiyah Elsheikh [Email](Atiyah.Elsheikh@mathemodica.com)  
 See [my Profile](http://mathemodica.com/members/atiyah/)
 
 Description
@@ -19,7 +18,6 @@ The underlying promising goal is to become the AD version of the Modelica Standa
 This library serves as a guide for illustrating equation-based algorithmic differentation techniques for Modelica libraries. 
 An algorithmically differentiated Modelica library contains everything the original version has together with parameter sensitivities. 
 The same models relying on that library can evaluates parameter sensitivities with few minimal efforts and slight changes. However these models preserve the same interface and outlook.
-
 
 It represents a testing platform for algoirhtmic differerntiation of Modelica libraries w.r.t.
   * algorithmic methodologies 
@@ -74,7 +72,6 @@ Tested with
 - OpenModelica 1.13.2 
 - Dymola 2020  
 - MSL 3.2.3
-
 
 References 
 ==========
