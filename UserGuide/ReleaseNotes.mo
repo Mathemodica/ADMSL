@@ -17,7 +17,7 @@ model ReleaseNotes "Release notes"
 <p><br><h4><span style=\"color: #005500\">History</span></h4></p>
 <ul>
 <li>V 1.0 (Vienna Release) : 26.01.2014 </li>
-<p>	Fist release for Algorithmic differentiation of some classes of the standard supackage <a href=\"Modelica.Electrical.Analog.Basic\">Modelica.Electrical.Analog.Basic</a></p>
+<p>	Fist release for Algorithmic differentiation of some classes of the standard supackage <a href=\"modelica://Modelica.Electrical.Analog.Basic\">Modelica.Electrical.Analog.Basic</a></p>
 <li>V 1.1 (Hamburg Release) : September 2019 </li>
 </ul>
 </html>"));
