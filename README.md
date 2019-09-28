@@ -38,8 +38,18 @@ a Modelica simulation environment.
 Releases  
 ========
 
+Currenet Release
+----------------
+
 current release is V1.1.0-alpha (Hamburg Release). Detailed release notes can be consulted [here](https://github.com/AtiyahElsheikh/ADMSL/blob/master/UserGuide/ReleaseNotes.mo) 
 using a Modelica simulation environment. 
+
+Tested with
+-----------
+
+- OpenModelica 1.13.2 
+- Dymola 2020  
+- MSL 3.2.3
 
 History
 -------
@@ -50,6 +60,9 @@ History
 * v1.0         (Vienna Release)     :   January 2014 
 	- Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
 
+
+Licenses 
+========
 
 License V1.1.0 (Hamburg Release)
 --------------------------------
@@ -65,13 +78,6 @@ Copyright © 2013, Austrian Institute of Technology, Energy Department, Complex 
 This Modelica package is free software and the use is completely at your own risk;
 it can be redistributed and/or modified under the terms of the [Modelica License 2](https://modelica.org/licenses/ModelicaLicense2).
 
-
-Tested with
-============
-
-- OpenModelica 1.13.2 
-- Dymola 2020  
-- MSL 3.2.3
 
 References 
 ==========
