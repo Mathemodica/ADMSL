@@ -79,13 +79,13 @@ Tested with
 References 
 ==========
 
-Atiyah Elsheikh, Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models, Modelica'2019: The 13th International Modelica Conference, Regensburg, Germany, 2019
+* Atiyah Elsheikh, Dynamic Parameter Sensitivities: Summary of computation methods for continuous-time Modelica models, Modelica'2019: The 13th International Modelica Conference, Regensburg, Germany, 2019
 
-Atiyah Elsheikh, Modeling parameter sensitivities via equation-based algorithmic differentiation techniques: The ADMSL.Electrical.Analog.Library, Modelica'2014: The 10th International Modelica Conference, Lund, Sweden, 2014
+* Atiyah Elsheikh, Modeling parameter sensitivities via equation-based algorithmic differentiation techniques: The ADMSL.Electrical.Analog.Library, Modelica'2014: The 10th International Modelica Conference, Lund, Sweden, 2014
 
-Atiyah Elsheikh, Modelica-based computational tools for sensitivity analysis via automatic differentiation, Dissertation, RWTH Aachen university, 2013. 
+* Atiyah Elsheikh, Modelica-based computational tools for sensitivity analysis via automatic differentiation, Dissertation, RWTH Aachen university, 2013. 
 
-Atiyah Elsheikh, ADGenKinetics: An algorithmically differentiated library for biochemical networks modeling via simplified kinetics formats, Modelica'2012, Munich, Germany, 2012  
+* Atiyah Elsheikh, ADGenKinetics: An algorithmically differentiated library for biochemical networks modeling via simplified kinetics formats, Modelica'2012, Munich, Germany, 2012  
 
 Online versions of the paper can be found here: 
 http://www.researchgate.net/profile/Atiyah_Elsheikh/publications/ 
