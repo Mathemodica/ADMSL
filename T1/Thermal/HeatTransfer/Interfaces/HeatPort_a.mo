@@ -1,18 +1,9 @@
 within ADMSL.T1.Thermal.HeatTransfer.Interfaces;
 connector HeatPort_a
   "AD version of Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a"
-  extends HeatPort;
-  annotation (Icon(graphics={     Rectangle(
-          extent={{-118,58},{4,-50}},
-          lineColor={191,0,0},
-          fillColor={191,0,0},
-          fillPattern=FillPattern.Solid)}), Diagram(graphics={
-                                   Rectangle(
-          extent={{-50,34},{50,-66}},
-          lineColor={191,0,0},
-          fillColor={191,0,0},
-          fillPattern=FillPattern.Solid), Text(
-          extent={{-120,104},{100,44}},
-          lineColor={191,0,0},
-          textString="%name")}));
+  extends Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a;
+  extends Utilities.GradientInfo;
+
+  Real g_T[NG] "gradient of port's Temperature";
+  flow Real g_Q_flow[NG] "gradient of port's heat flow rate";
 end HeatPort_a;

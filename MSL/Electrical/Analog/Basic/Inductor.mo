@@ -1,8 +1,9 @@
 within ADMSL.MSL.Electrical.Analog.Basic;
 model Inductor "Ideal linear electrical inductor"
-  replaceable class OnePort =
+  replaceable partial model Port =
       ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
-  extends OnePort;
+  extends Port; 
+  // extends ADMSL.MSL.Electrical.Analog.Interfaces.OnePort;
 
   parameter Modelica.SIunits.Inductance L(start=1) "Inductance";
 equation

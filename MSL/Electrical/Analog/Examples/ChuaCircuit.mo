@@ -1,39 +1,38 @@
 within ADMSL.MSL.Electrical.Analog.Examples;
 model ChuaCircuit "Chua's circuit, ns, V, A"
 
-  replaceable package Basic = ADMSL.MSL.Electrical.Analog.Basic;
-  replaceable package Utilities =
-      ADMSL.MSL.Electrical.Analog.Examples.Utilities;
+  replaceable package Component = ADMSL.MSL.Electrical.Analog.Basic;
+  replaceable package Util = ADMSL.MSL.Electrical.Analog.Examples.Utilities;
 
   import Modelica.Icons;
   extends Icons.Example;
 
-  Basic.Inductor       L(L=18) annotation (Placement(transformation(
+  Component.Inductor       L(L=18) annotation (Placement(transformation(
         origin={-75,38},
         extent={{-25,-25},{25,25}},
-        rotation=270)));
-  Basic.Resistor       Ro(R=12.5e-3) annotation (Placement(transformation(
+        rotation=270)));  
+  Component.Resistor       Ro(R=12.5e-3) annotation (Placement(transformation(
         origin={-75,-17},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Basic.Conductor       G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
+  Component.Conductor       G(G=0.565) annotation (Placement(transformation(extent={{-25,38},
             {25,88}},      rotation=0)));
-  Basic.Capacitor       C1(C=10, v(start=4)) annotation (Placement(transformation(
+  Component.Capacitor       C1(C=10, v(start=4)) annotation (Placement(transformation(
         origin={25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Basic.Capacitor       C2(C=100) annotation (Placement(transformation(
+  Component.Capacitor       C2(C=100) annotation (Placement(transformation(
         origin={-25,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Utilities.NonlinearResistor       Nr(
+  Util.NonlinearResistor       Nr(
     Ga(min=-1) = -0.757576,
     Gb(min=-1) = -0.409091,
     Ve=1) annotation (Placement(transformation(
         origin={75,3},
         extent={{-25,-25},{25,25}},
         rotation=270)));
-  Basic.Ground       Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
+  Component.Ground       Gnd annotation (Placement(transformation(extent={{-25,-112},{25,
             -62}}, rotation=0)));
 equation
 
