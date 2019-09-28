@@ -1,16 +1,16 @@
-ADMSL - Dymola branch
-====================== 
+ADMSL 
+=====
 
 Algorithmically Differentiated Library of a part of the standard library Modelica.Electrical.Analog.Basic 
 
 Author 
-======
+------
 
 Atiyah Elsheikh [Email](Atiyah.Elsheikh@mathemodica.com)  
 See [my Profile](http://mathemodica.com/members/atiyah/)
 
 Description
-=========== 
+-----------
 
 ADMSL is the Algorithmically Differentiated (AD) version of a part of the Modelica standard package Modelica.Electrical.Analog.Basic. 
 The underlying promising goal is to become the AD version of the Modelica Standard Library. This is where the name ADMSL comes from (Algorithmically differentiated Modelica Standard Library). 
@@ -28,21 +28,21 @@ It represents a testing platform for algoirhtmic differerntiation of Modelica li
 
 
 Further contribution
-====================
+--------------------
 
 Further contribution / collaboration on the topic of algorithmic differentiation of Modelica libraries are welcome. 
 Please consult [HowToAddComponent](https://github.com/AtiyahElsheikh/ADMSL/blob/master/UserGuide/HowToAddComponent.mo) using a
 a Modelica simulation environment.   
 
 
-Current Release 
-================
+Releases  
+========
 
 current release is V1.1.0-alpha (Hamburg Release). Detailed release notes can be consulted [here](https://github.com/AtiyahElsheikh/ADMSL/blob/master/UserGuide/ReleaseNotes.mo) 
 using a Modelica simulation environment. 
 
 History
-=======
+-------
 
 * v1.1.0-alpha (Hamburg Release )   :   September 2019  
 	- Improving the overall formulation and working version with OpenModelica 1.13.0
@@ -51,15 +51,15 @@ History
 	- Algorithmic differentiation of some classes of the Modelica.Electrical.Analog.Basic   
 
 
-License V1.1.0 (Hamburg)
-========================
+License V1.1.0 (Hamburg Release)
+--------------------------------
 
 Copyright © 2019, Mathemodica.com
 This Modelica package is free software and the use is completely at your own risk;
 it can be redistributed and/or modified under the terms of the [3-BSD License of Modelica Association](https://www.modelica.org/licenses/modelica-3-clause-bsd).
 
-License V1.0 (Vienna) 
-======================
+License V1.0 (Vienna Release) 
+-----------------------------
 
 Copyright © 2013, Austrian Institute of Technology, Energy Department, Complex Energy Systems
 This Modelica package is free software and the use is completely at your own risk;
@@ -88,7 +88,7 @@ Online versions of the paper can be found here:
 http://www.researchgate.net/profile/Atiyah_Elsheikh/publications/ 
 
 Bibtex sources 
-==============
+--------------
 
 @Conference{Elsheikh2019,
 author = {Atiyah Elsheikh},
