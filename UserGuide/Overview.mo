@@ -49,7 +49,7 @@ ADMSL.T1.Electrical.Analog.Basic.Conductor\">ADMSL.T1.Electrical.Analog.Basic.Co
 <ul>
 <li><a href=\"ADMSL.UserGuide.Contributors\">Contributors</a></li>
 <li><a href=\"ADMSL.UserGuide.Contact\">Contact</a></li>
-<li><a href=\"ADMSL.UserGuide.ThreeClauseBSDLicenseModelicaAssociation\">License</a></li>
+<li><a href=\"ADMSL.UserGuide.License\">License</a></li>
 <li><a href=\"ADMSL.UserGuide.ReleaseNotes\">Current Relase and Release Notes</a></li>
 <li><a href=\"ADMSL.UserGuide.References\">References</a></li>
 </ul>
