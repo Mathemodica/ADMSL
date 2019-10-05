@@ -38,7 +38,7 @@ a Modelica simulation environment.
 Releases  
 ========
 
-Currenet Release
+Current Release
 ----------------
 
 current release is V1.1.0-alpha (Hamburg Release). Detailed release notes can be consulted [here](https://github.com/AtiyahElsheikh/ADMSL/blob/master/UserGuide/ReleaseNotes.mo) 
